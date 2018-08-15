@@ -1,0 +1,17 @@
+{
+  "name": "starting_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "json-server": "^0.14.0"
+  },
+  "devDependencies": {
+    "typescript": "3.0.1"
+  }
+}
