@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc ."
+    "build": "tsc",
+    "clean": "rm ./src/api.js",
+    "start:api": "npm run build && node ./src/api.js"
   },
   "author": "",
   "license": "ISC",
