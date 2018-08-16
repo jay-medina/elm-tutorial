@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: ['./src/index.ts'],
+    app: './src/app/index.ts',
   },
 
   output: {
@@ -13,6 +13,10 @@ module.exports = {
   mode: 'development',
 
   devtool: 'source-map',
+
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js'],
+  },
 
   module: {
     rules: [
@@ -45,6 +49,7 @@ module.exports = {
 
       {
         test: /\.tsx?$/,
+        exclude: /node_modules/,
         loader: 'ts-loader',
       },
     ],
