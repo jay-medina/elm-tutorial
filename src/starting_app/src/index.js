@@ -1,9 +1,10 @@
-require('ace-css/css/ace.css');
-require('font-awesome/css/font-awesome.css');
+import 'ace-css/css/ace.css';
+import 'font-awesome/css/font-awesome.css';
 
-require('./index.html');
+import './index.html';
 
-const Elm = require('./Main.elm');
+import { Main } from './Main.elm';
+
 const mountNode = document.getElementById('main');
 
-const app = Elm.Main.embed(mountNode);
+const app = Main.embed(mountNode);
