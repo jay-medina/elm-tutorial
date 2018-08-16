@@ -7,7 +7,7 @@
     "build:api": "tsc ./src/api/api.ts --outDir ./dist --pretty",
     "build:webpack": "webpack",
     "build": "run-p build:webpack build:api",
-    "api": "node ./src/api.js",
+    "api": "node ./dist/api.js",
     "clean": "rm -rf ./dist",
     "client": "webpack-dev-server --port 3000"
   },
