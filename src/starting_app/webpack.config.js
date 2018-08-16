@@ -6,9 +6,11 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
   },
+
+  mode: 'development',
 
   module: {
     rules: [
@@ -35,8 +37,6 @@ module.exports = {
         loader: 'file-loader',
       },
     ],
-
-    noParse: /\.elm$/,
   },
 
   devServer: {
