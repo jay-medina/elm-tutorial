@@ -9,7 +9,7 @@
     "build": "run-p build:webpack build:api",
     "api": "node ./dist/api.js",
     "clean": "rm -rf ./dist",
-    "client": "webpack-dev-server --port 3000"
+    "start": "webpack-dev-server --port 3000"
   },
   "author": "",
   "license": "ISC",
