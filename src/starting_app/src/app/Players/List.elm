@@ -12,6 +12,16 @@ nav =
         [ div [ class "left p2" ] [ text "Players" ] ]
 
 
+playerHeader : Html Msg
+playerHeader =
+    tr []
+        [ th [] [ text "Id " ]
+        , th [] [ text "Name " ]
+        , th [] [ text "Level " ]
+        , th [] [ text "Actions " ]
+        ]
+
+
 playerRow : Player -> Html Msg
 playerRow player =
     tr []
@@ -26,14 +36,7 @@ list : List Player -> Html Msg
 list players =
     div [ class "p2" ]
         [ table []
-            [ thead []
-                [ tr []
-                    [ th [] [ text "Id " ]
-                    , th [] [ text "Name " ]
-                    , th [] [ text "Level " ]
-                    , th [] [ text "Actions " ]
-                    ]
-                ]
+            [ thead [] [ playerHeader ]
             , tbody [] (List.map playerRow players)
             ]
         ]
